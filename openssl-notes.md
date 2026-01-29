@@ -1,0 +1,82 @@
+# OpenSSL Certificate Verification Notes
+
+## Environment
+- OS: Kali Linux
+- Tool: OpenSSL
+
+## Target
+www.cisco.com
+
+## Retrieved Certificate
+The server certificate was extracted from the TLS handshake
+and saved to a local file (`cert.pem`).
+
+-----BEGIN CERTIFICATE-----
+MIIHBzCCBe+gAwIBAgIQQAGWti1XCAq8tmpV+jLaqTANBgkqhkiG9w0BAQsFADBy
+MQswCQYDVQQGEwJVUzESMBAGA1UEChMJSWRlblRydXN0MS4wLAYDVQQLEyVIeWRy
+YW50SUQgVHJ1c3RlZCBDZXJ0aWZpY2F0ZSBTZXJ2aWNlMR8wHQYDVQQDExZIeWRy
+YW50SUQgU2VydmVyIENBIE8xMB4XDTI1MDUwOTE3NTIyNloXDTI2MDUxNDE3NTEy
+NlowajELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcT
+CFNhbiBKb3NlMRswGQYDVQQKExJDaXNjbyBTeXN0ZW1zIEluYy4xFjAUBgNVBAMT
+DXd3dy5jaXNjby5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJ
+DLRpvSJ3slD6nztsMmQgoWvvdopnJ9JjkCGj9DWHBay8LvQIegkQDDVnQqjpYY7G
+gqWY7/N1MJCviKrU4+HficmncDeX+bs0NTST/KKqzWGsQZG212+6fzSmRNglE+3q
+9eTxh83f33dcHS9sjP4Mr7A5kW2/cw1hMfSYtQWu2+u3IrN2egPixIksXHoyM79s
+SVyrfZdA/G4T3v14Nm9+JT4txKzE/yQMQG1Rt/J/+heYqmsf7oTKo1hN9RDBmKSt
+dtoFqelbn8Cbb2V+K6KZUOquZPeb9QugR+JtuLs+RvuCDNni6DWzggDLM6OucwFc
+kg64kfPOpnZCMHELiGrbAgMBAAGjggOfMIIDmzAOBgNVHQ8BAf8EBAMCBaAwgYUG
+CCsGAQUFBwEBBHkwdzAwBggrBgEFBQcwAYYkaHR0cDovL2NvbW1lcmNpYWwub2Nz
+cC5pZGVudHJ1c3QuY29tMEMGCCsGAQUFBzAChjdodHRwOi8vdmFsaWRhdGlvbi5p
+ZGVudHJ1c3QuY29tL2NlcnRzL2h5ZHJhbnRpZGNhTzEucDdjMB8GA1UdIwQYMBaA
+FIm4m7ae7fuwxr0N7GdOPKOSnS35MCEGA1UdIAQaMBgwCAYGZ4EMAQICMAwGCmCG
+SAGG+S8ABgMwRgYDVR0fBD8wPTA7oDmgN4Y1aHR0cDovL3ZhbGlkYXRpb24uaWRl
+bnRydXN0LmNvbS9jcmwvaHlkcmFudGlkY2FvMS5jcmwwgbMGA1UdEQSBqzCBqIIN
+d3d3LmNpc2NvLmNvbYISdGVjaGRvY3MuY2lzY28uY29tghR3d3cuc3RhdGljLWNp
+c2NvLmNvbYIXd3d3LWNsb3VkLWNkbi5jaXNjby5jb22CGHd3dy5tZWRpYWZpbGVz
+LWNpc2NvLmNvbYIbd3d3LWRldi1jbG91ZC1jZG4uY2lzY28uY29tgh13d3ctc3Rh
+Z2UtY2xvdWQtY2RuLmNpc2NvLmNvbTAdBgNVHQ4EFgQUIAInxmnrZwUFd4danmvQ
+RTlN7FswHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMIIBfwYKKwYBBAHW
+eQIEAgSCAW8EggFrAWkAdgAOV5S8866pPjMbLJkHs/eQ35vCPXEyJd0hqSWsYcVO
+IQAAAZa2LVfWAAAEAwBHMEUCIQCdtbjU5pMVTR2aAqN++iZBeDdtPqZ4vmfsMn/W
+msevCwIgdNxWDBpshorBeIHGh07Lmeu7bNdy217uQ+GjW33uVsoAdgCWl2S/VViX
+rfdDh2g3CEJ36fA61fak8zZuRqQ/D8qpxgAAAZa2LVePAAAEAwBHMEUCIGUAgvx9
+d6AlCg0QIR7NNZk1CTV4DDmrM09yuOHutzkwAiEAkq+WVzOwzqPeCPOPngdN12Es
+eTLDLRrPEMy3m7mRMuoAdwDLOPcViXyEoURfW8Hd+8lu8ppZzUcKaQWFsMsUwxRY
+5wAAAZa2LVdbAAAEAwBIMEYCIQC8ZDvM2s0GUubmL56phByNpoLkhwyRrQ6tcben
+wfhNJAIhAOyNhoYx8Gt+nhvXIUZorH19vk/nlXPPi8WhZevqxDVtMA0GCSqGSIb3
+DQEBCwUAA4IBAQC9mH50qGRAbg5FAEpkIb217erJiXvsGsWgi3ied+3CRt8ZgOE2
+21GvjrHHQJfPDBBAKBWLhz18wrSSDiWj9KMVYYegctpagfgFZeOLtB8xnFb3lRM7
+oFYytbsZNaRoZDCUviJMWgrGb9V73wZ44ZrSn7oa8oQ1UeYDXGtO3tmoZOAgonw5
+cyjSCCJDYGmyP797I8LKdTI2kDZiTA5cu1bZa91zW5QuAvfiTwbLPBLxEE5uQK2x
+4yBAUQx3yctLwt5+MzUHOYUYRkXX96ZWrvFfSJdg+myA4Hb58OF/wVtNPamkVF3O
+kJ/pPagiHMMbO9ubReUuEwIMp1MoYixo8f+b
+-----END CERTIFICATE-----
+
+## Fingerprint Calculation
+
+### SHA-1
+```bash
+openssl x509 -in cert.pem -noout -fingerprint -sha1
+```
+```text
+sha1 Fingerprint=12:86:67:07:0A:5A:F4:32:5A:56:E5:2F:37:F6:FB:6B:68:11:E4:61
+```
+### SHA-256
+```bash
+openssl x509 -in cert.pem -noout -fingerprint -sha1
+```
+```text
+sha256 Fingerprint=EE:2A:BF:62:44:01:30:40:1B:0E:5C:35:E3:B2:31:41:CE:F1:E6:2D:C6:A2:4C:F1:7B:2D:07:9E:82:87:79:BA
+
+```
+##Browser Verification
+The certificate fingerprints were compared with the values
+displayed in the Firefox certificate viewer.
+
+SHA-1: Match
+SHA-256: Match
+
+##Result
+Certificate is valid and trusted
+No MITM or HTTPS proxy detected
+HTTPS connection successfully verified
