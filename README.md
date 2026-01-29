@@ -60,6 +60,15 @@ by the server.
 - A dedicated security workstation VM was not used
 - Browser GUI tools were used for convenience and visualization
 
+## Additional Files
+
+- **openssl-notes.md** – detailed notes of the certificate retrieval process, 
+  including SHA-1 and SHA-256 fingerprint calculations and browser verification.
+  
+- **fingerprint_check.py** – a simple Python script to compare SHA-1 and 
+  SHA-256 fingerprints obtained via OpenSSL and the browser. 
+  Returns a boolean result indicating whether the fingerprints match.
+
 ## What I Learned
 - How HTTPS trust is built using Root Certificate Authorities
 - How to retrieve and analyze X.509 certificates with OpenSSL
